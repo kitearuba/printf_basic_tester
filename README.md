@@ -14,6 +14,7 @@ This project originated from a fellow student, and we've worked together to impr
 - [🚀 Usage](#-usage)
 - [🧪 Test Coverage](#-test-coverage)
 - [🔍 Understanding the Output](#-understanding-the-output)
+- [🔧 Compilation Options](#-compilation-options)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -28,7 +29,7 @@ This project originated from a fellow student, and we've worked together to impr
 
 - A working implementation of the `ft_printf` function.
 - A C compiler like `gcc`.
-- The `libftprintf.a` static library file generated from your `ft_printf` implementation.
+- The `libftprintf.a` static library file generated from your `ft_printf` implementation (if you used `libft`).
 
 ## ⚙️ Installation
 
@@ -47,8 +48,19 @@ Place `main.c`, `libftprintf.a`, and your header files (`ft_printf.h`, `libft.h`
 ## 🚀 Usage
 
 ### 1. **Compile the Tester**
+
+Depending on whether or not you used `libft` in your project, follow the appropriate compilation steps:
+
+#### 🛠️ **Option 1: With `libft` Library**
+If your `ft_printf` implementation relies on functions from the `libft` library:
 ```bash
 gcc main.c -I./include/ -I./libft/ -L. -lftprintf -o tester
+```
+
+#### 🛠️ **Option 2: Without `libft` Library**
+If your `ft_printf` implementation does not rely on the `libft` library:
+```bash
+gcc main.c -I./include/ -L. -lftprintf -o tester
 ```
 
 ### 2. **Run the Tester**
@@ -114,6 +126,17 @@ Summary:
 
 ### Final Summary:
 After all tests are executed, you'll see a summary showing how many tests passed and how many failed. This helps you quickly assess the overall accuracy of your `ft_printf` implementation.
+
+## 🔧 Compilation Options
+
+### For Users Who Did Not Use `libft`:
+If your `ft_printf` implementation does not rely on the `libft` library, you can compile the tester without linking `libft` by omitting the `-I./libft/` and relying solely on the necessary includes for `ft_printf`.
+
+```bash
+gcc main.c -I./include/ -L. -lftprintf -o tester
+```
+
+This will ensure that your tester is correctly set up even if you did not incorporate the `libft` library into your project.
 
 ## 🤝 Contributing
 

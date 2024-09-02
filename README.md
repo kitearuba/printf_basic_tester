@@ -34,7 +34,7 @@ This project originated from a fellow student, and we've worked together to impr
 
 ### 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/printf-tester.git
+git clone git@github.com:kitearuba/printf_basic_tester.git printf-tester
 cd printf-tester
 ```
 

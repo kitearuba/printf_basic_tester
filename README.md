@@ -54,13 +54,13 @@ Depending on whether or not you used `libft` in your project, follow the appropr
 #### 🛠️ **Option 1: With `libft` Library**
 If your `ft_printf` implementation relies on functions from the `libft` library:
 ```bash
-gcc main.c -I./include/ -I./libft/ -L. -lftprintf -o tester
+gcc printf_main_tester.c -I./include/ -I./libft/ -L. -lftprintf -o tester
 ```
 
 #### 🛠️ **Option 2: Without `libft` Library**
 If your `ft_printf` implementation does not rely on the `libft` library:
 ```bash
-gcc main.c -I./include/ -L. -lftprintf -o tester
+gcc printf_main_tester.c -I./include/ -L. -lftprintf -o tester
 ```
 
 ### 2. **Run the Tester**
